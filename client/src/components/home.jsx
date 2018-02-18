@@ -23,13 +23,13 @@ class Home extends Component {
     
     render() {
         return <div>
-        <h1>My Blog</h1>
+        <h1 className="text-danger text-center">My Blog</h1>
         {this.state.list.slice().reverse().map((x) => {
             return (
-                <div key={x.id}>
-                    <h2>{x.title}</h2>
-                    <p>{x.content}</p>
-                    <Link to={`/blog/${x.id}`}><p>more info</p></Link>
+                <div className="border col-5 mx-auto mb-2" key={x.id}>
+                    <h2 className="text-center">{x.title}</h2>
+                    <h5 className="text-center ">{x.content}</h5>
+                    <Link className="text-center text-wrap" to={`/blog/${x.id}`}><p>more info</p></Link>
                 </div>
             )
         })}

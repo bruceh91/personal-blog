@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
-import AuthButton from './auth/authButton';
 
+
+import Navbar from './navbar';
 import Blog from './singleBlog';
 import Home from './home';
 import Create from './createBlogPost';
@@ -21,10 +22,7 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <Link to="/">Home! </Link>
-                    <Link to="/admin/home"> Admin Home!</Link>
-                    <Link to="/donate">Donations</Link>
-                    <AuthButton />
+                    <Navbar />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/login" component={Login} />
