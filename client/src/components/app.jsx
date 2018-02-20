@@ -14,6 +14,7 @@ import Admin from './privateHome';
 import Edit from './edit';
 import Donate from './donate';
 import Thank from './thanks';
+import Contact from './contact';
 
 
 class Navigation extends Component {
@@ -30,6 +31,7 @@ class Navigation extends Component {
                         <Route path="/blog/:id?" component={Blog} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/thanks" component={Thank} />
+                        <Route path='/contact' component={Contact} />
                         <PrivateRoute path="/admin/home" component={Admin} />
                         <PrivateRoute path="/admin/createPost" component={Create} />
                         <PrivateRoute path="/admin/edit/:id" component={Edit} />

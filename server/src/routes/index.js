@@ -5,12 +5,14 @@ import authRouter from './auth';
 import usersRouter from './users';
 import blogRouter from './blogs';
 import stripeDonationsRouter from './stripeDonations';
+import contactRouter from './contactform';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 
 let router = Router();
 
 router.use('/auth', authRouter);
-router.use('/donate', stripeDonationsRouter)
+router.use('/donate', stripeDonationsRouter);``
+router.use('/contact', contactRouter);
 
 router.route('*')
     .post(tokenMiddleware, isLoggedIn)
